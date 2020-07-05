@@ -1,12 +1,14 @@
 /**
- * The function of removing an element from an array at the specified index. Task 6
- * @type {number[]}
+ * The function takes 2 arrays and returns a new array in which all elements from two arrays are collected without repetition. Task 7
+ * @type {(string|number)[]}
  */
-let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let array1 = ['a', 2, 'b', 4, 5, 6, 'c', 8, 'D', 10];
+let array2 = [10, 2, 5, 1, 7, 9, 3, 4, 6, 8];
+let finalArr = array1.concat(array2);
 
-function deleteElem(i, deleteElem) {
-    arr.splice(i, deleteElem);
-    return arr;
+function onlyUnique(value, index, self) {
+    return self.indexOf(value) === index;
 }
 
-deleteElem(0, 1);
+let unique = finalArr.filter(onlyUnique);
+alert(unique);
