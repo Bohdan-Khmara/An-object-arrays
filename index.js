@@ -1,15 +1,15 @@
 /**
- * The function takes an array and outputs only even elements. Task 2
+ * The function takes an array and returns the sum of all elements of the array. Task 3
  * @type {number[]}
  */
 let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-function evenNumbers(arr) {
-    for (let i = 0; i <= arr.length; i++) {
-        if (i % 2 === 0) {
-            alert(i);
-        }
+function sum(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
     }
+    return sum;
 }
 
-evenNumbers(arr);
+sum(arr);
